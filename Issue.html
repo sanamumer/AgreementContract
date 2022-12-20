@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Agreement contract</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.0/web3.min.js" integrity="sha512-bSQ2kf76XufUYS/4XinoHLp5S4lNOyRv0/x5UJACiOMy8ueqTNwRFfUZWmWpwnczjRp9SjiF1jrXbGEim7Y0Xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel='stylesheet' href='style.css' />
+</head>
+
+<body>
+  <button onclick="connectToMetaMask()" class="btn" style="text-align: center;">
+    <span>Connect</span>
+</button>
+    <div class="container">
+        <center><h1> Create Agreement Contract</h1></center>
+        <hr>
+ 
+  <br />
+  <div class="entry-form">
+    <div class="form-group">
+      <label for="contract ID">Contract ID *</label>
+      <input type="text" class="form-control" name="contractID" id="contractID" placeholder="Conttract ID"
+        required>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="Party1Name">Name *</label>
+      <input type="text" class="form-control" name="name" id="name" placeholder="Party1 name">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="Terms">Terms and Conditions *</label>
+      <input type="text" class="form-control" name="terms" id="terms" placeholder="Terms" required>
+    </div>
+   <hr>
+    <div class="form-group">
+      <label for="date">Issue Date *</label>
+      <input type="date" class="form-control" id="date" name="date" required>
+    </div>
+    <hr>
+    <button onclick="createContract()" class="registerbtn">Create contract</button>
+  </div>
+</div>
+</body>
+
+</html>

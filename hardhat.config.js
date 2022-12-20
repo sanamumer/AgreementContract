@@ -1,22 +1,21 @@
-require("@nomicfoundation/hardhat-toolbox");
-require("@nomiclabs/hardhat-ethers");
-require("@openzeppelin/hardhat-upgrades");
-require("@nomiclabs/hardhat-truffle5");
 
+require("@nomicfoundation/hardhat-toolbox");
+require("@openzeppelin/hardhat-upgrades");
+require("@nomiclabs/hardhat-ethers");
 require("dotenv").config();
 
+/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
- solidity: "0.8.17",
- networks: {
-   goerli: {
-     url: `https://goerli.infura.io/v3/${process.env.INFURA_API_KEY}`,
-     accounts: [process.env.PRIVATE_KEY],
-   },
-   ganache: {
-    url : 'https://localhost:8545'
-   }
- },
-
+  defaultNetwork: 'ganache',
+  networks: {
+    ganache: {
+      url: 'https://localhost:8545'
+    },
+    goerli:{
+      url:'https://goerli.infura.io/v3/999f7b04821a4e28acbe1c5ddcf43baf',
+      accounts:['fe3fb6a3a2322072a1319177dc2025a53fe7dde05734260f34bf3e757f7764c3']
+    }
+  },
+  solidity: "0.8.17",
 };
-
 
