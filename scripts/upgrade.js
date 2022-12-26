@@ -3,7 +3,7 @@ const {ethers,upgrades}= require('hardhat');
 async function main() {
   
   const SampleV2 = await ethers.getContractFactory("AgreementContractV2");
-  const samplev2 = await upgrades.upgradeProxy('0x327B5Cc65f23494eCD1774B3Fb7C9d1Ab90cb1fd',SampleV2);
+  const samplev2 = await upgrades.upgradeProxy('0xBAbE510687C2Ff732446Cb9ba688DAff7842b345',SampleV2);
 
   await samplev2.deployed();
 
